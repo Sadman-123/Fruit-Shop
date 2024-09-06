@@ -1,16 +1,6 @@
-# untitled1
+# Fruit Shop App
+This app is basically a fruit shop app where user can buy fruits..Basically i made that api with js..then with the help of http i fetch the info and then i also make the cards dissimbled which is way cool! Lets see where it goes...i forgot to mention i have used Getx for state managements.
+## App Screenshots!
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="SS/s1.png" alt="App Screenshot" width="300"/>
+<img src="SS/s2.png" alt="App Screenshot" width="300"/>
