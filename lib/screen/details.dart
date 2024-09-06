@@ -12,9 +12,11 @@ class Details extends StatelessWidget
   }
   @override
   Widget build(BuildContext context) {
+    var mdq=MediaQuery.of(context).size.width;
+    var mdh=MediaQuery.of(context).size.height;
     return Scaffold(
       appBar: AppBar(
-        title: Text("Check Out #${this.lst[ind]['code']}",style: TextStyle(fontSize: 29,fontWeight: FontWeight.w900),),
+        title: Text("Check Out #${this.lst[ind]['code']}",style: TextStyle(fontSize: mdq*0.067,fontWeight: FontWeight.w900),),
       ),
       body: Column(
         children: [
@@ -22,7 +24,7 @@ class Details extends StatelessWidget
             child: Column(
               children: [
                 Hero(tag: "${this.lst[ind]['code']}", child: Container(
-                  height: 300,
+                  height: mdh*0.38,
                   width: double.infinity,
                   decoration: BoxDecoration(
                       image: DecorationImage(image: NetworkImage("${this.lst[ind]['pic']}"),fit: BoxFit.cover),
@@ -37,15 +39,15 @@ class Details extends StatelessWidget
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("${this.lst[ind]['item']}",style: TextStyle(fontSize: 33,fontWeight: FontWeight.bold),),
-                      Text("${this.lst[ind]['price']}\$",style: TextStyle(fontSize: 33,fontWeight: FontWeight.bold),)
+                      Text("${this.lst[ind]['item']}",style: TextStyle(fontSize: mdq*0.09,fontWeight: FontWeight.bold),),
+                      Text("${this.lst[ind]['price']}\$",style: TextStyle(fontSize: mdh*0.035,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 ),
                 Container(
                   margin: EdgeInsets.all(3),
                   alignment: Alignment.topRight,
-                  child:Text("x${this.lst[ind]['quantity']}",style: TextStyle(fontSize:23 ),) ,
+                  child:Text("x${this.lst[ind]['quantity']}",style: TextStyle(fontSize:mdq*0.073 ),) ,
                 )
               ],
             ),
@@ -58,8 +60,8 @@ class Details extends StatelessWidget
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text("Total Price:",style: TextStyle(fontSize: 25),),
-                      Text("${this.getsum(lst[ind]['price'],lst[ind]['quantity'])}\$",style: TextStyle(fontSize: 27,fontWeight: FontWeight.w800),)
+                      Text("Total Price:",style: TextStyle(fontSize: mdq*0.06),),
+                      Text("${this.getsum(lst[ind]['price'],lst[ind]['quantity'])}\$",style: TextStyle(fontSize: mdq*0.073,fontWeight: FontWeight.w800),)
                     ],
                   ),
                   margin: EdgeInsets.all(10),
@@ -67,14 +69,14 @@ class Details extends StatelessWidget
                 GestureDetector(
                   child: Container(
                     margin: EdgeInsets.all(10),
-                    height: 59,
+                    height: mdh*0.08,
                     width: double.infinity,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         color: Colors.blue.shade400
                     ),
                     alignment: Alignment.center,
-                    child: Text("PLACE ORDER",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w900),),
+                    child: Text("PLACE ORDER",style: TextStyle(fontSize: mdq*0.065,fontWeight: FontWeight.w900),),
                   ),
                 )
               ],
